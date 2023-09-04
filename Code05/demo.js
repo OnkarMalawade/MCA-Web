@@ -20,7 +20,8 @@ function mult()
 }
 function div()
 {
-    const rs = num1 / num2;
-  window.alert(rs);
+   const rs = num1 / num2;
+    //window.alert("Division:"+rs);
+    console.log(rs);
   
 }
