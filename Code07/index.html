@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects in Java</title>
+</head>
+<body>
+    <script>
+        const student = {
+            Fname : 'Onkar',
+            Lname : 'Malawade',
+            RollNo : 37,
+            MobNo : 7020767185,
+            city : 'Talere',
+
+            FullName : function(){
+                return (this.Fname)+ (" ") + (this.Lname);
+            }
+        };
+        
+        document.write(student.Fname+ " is From " +student.city + "<br>");
+        document.write(student.FullName());
+    </script>
+
+</body>
+</html>
