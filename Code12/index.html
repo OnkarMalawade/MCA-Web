@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Number</title>
+</head>
+<body>
+    
+    <script>
+        class Complex{
+            constructor (num, im){
+                this.num = num;
+                this.im = im;
+            }
+
+            // sum of complex number
+            sumComplex(num, im){
+                this.num = this.num + num;
+                this.im = this.im + im;
+            }
+
+            //Substraction
+            subComplex(num, im){
+                this.num = this.num - num;
+                this.im = this.im - im;
+            }
+
+            Winoutput(){
+                document.write(this.num+" i"+this.im);
+            }
+        }
+        const comp = new Complex(5,6);
+        comp.Winoutput();
+        comp.sumComplex(4,2);
+        document.write("<br>");
+        comp.Winoutput();
+        comp.subComplex(4,2);
+        document.write("<br>");
+        comp.Winoutput();
+    </script>
+    <h2>Class 2 </h2>
+   <script>
+    class Person{
+        constructor(name){
+            this.name = name;
+        }
+        getMethod(){
+            return this.name;
+        }
+        setMethod(name){
+            this.name = name;
+        }
+    }
+    const p1 = new Person("Onkar");
+    window.alert(p1.name);
+    p1.setMethod("Atharv");
+    window.alert(p1.name);
+   </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Operations</title>
+</head>
+<body>
+    <h1>
+        Array Operations
+    </h1>
+    <p id="p1">List of the Cars</p>
+
+    <p id="p2">List of the Cars2</p>
+
+    <p id="p3">List of the Cars2</p>
+    <script>
+        var Cars = ["Swift", "WagonR", "Alto", "i10"];
+        document.getElementById("p1").innerHTML = Cars[2];
+
+        var car = {NameOfCar:"Swift",Price:460000};
+        document.getElementById("p2").innerHTML = car.Price;
+        document.getElementById("p3").innerHTML = car["Price"];
+    </script>
+
+    <h3>Before Push Operations <span id="demo1"></span></h3>
+    <h3>After Push Operations <span id="demo2"></span></h3>
+    <h3>After Pop Operations <span id="demo3"></span></h3>
+    <h3>Join  Operations <span id="demo4"></span></h3>
+    <h3>After Deletion Operations <span id="demo5"></span></h3>
+    <h3>After Sort Operations <span id="demo6"></span></h3>
+
+    <script>
+        var car2 = new Array("Swift", "WagonR", "Alto", "i10","M800");
+        document.getElementById("demo1").innerHTML = car2;
+        car2.push("Thar");
+        document.getElementById("demo2").innerHTML = car2;
+        car2.pop();
+        document.getElementById("demo3").innerHTML = car2;
+        document.getElementById("demo4").innerHTML = car2.join(" & ");
+        delete car2[2];
+        document.getElementById("demo5").innerHTML = car2;
+        car2.sort();
+        document.getElementById("demo6").innerHTML = car2;
+    </script>
+</body>
+</html>

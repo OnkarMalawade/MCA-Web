@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Javascript Silces</h2>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+
+    <script>
+        let text = "Jawan, Jailer, Gadar2, Omg2";
+        let part = text.slice(0, 6);
+        let part1 = text.slice(7,13);
+        let part2 = text.slice(-5);
+        document.getElementById("p1").innerHTML = part;
+        document.getElementById("p2").innerHTML = part1;
+        document.getElementById("p3").innerHTML = part2;
+        document.getElementById("p4").innerHTML = text.substring(7,13);
+    </script>
+
+    <p id = "p5">Change The Mood Off</p>
+
+    <button type="button" onclick="myFun()">Try It</button>
+    <script>
+        function myFun(){
+            let text1 = document.getElementById("p5").innerHTML;
+            document.getElementById("p5").innerHTML = text1.replace("Off","On");
+        }
+    </script>
+</body>
+</html>

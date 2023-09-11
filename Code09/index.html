@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Operations</title>
+</head>
+<body>
+    <p id = "demo"></p>
+    <p id = "demo1"></p>
+    <p id = "demo2"></p>
+    <p id = "demo3"></p>
+    <script>
+        let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let text1 = "We Are From \" Sindhudurg \" in Maharashtra. ";
+        document.getElementById("demo").innerHTML = text.length; // Length of the String
+        document.getElementById("demo1").innerHTML = text1;
+
+        let x = "Onkar";//String
+        let y =  new String("Onkar");
+
+        document.getElementById("demo2").innerHTML = typeof x + "<br>" + typeof y;
+        document.getElementById("demo3").innerHTML = (x == y);
+    </script>
+</body>
+</html>

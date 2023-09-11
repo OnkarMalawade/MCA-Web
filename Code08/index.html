@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const Employee = {
+            name : 'Onkar',
+            da : 1000,
+            sra : 2000,
+            basicSalary : 20000,
+
+            TotalSalary : function () {
+                return (this.da+this.sra+this.basicSalary);
+            }
+        };
+        document.write("Total Salary of " +Employee.name+ " is " +Employee.TotalSalary());
+    </script>
+</body>
+</html>
