@@ -26,12 +26,13 @@
                 this.mod = mod;
             }
             show(){
-                return this.present() + ', it  is a model  name' +  this.mod;
+                return this.present() + ' , it  is a model  name ' +  this.mod;
             }
         }
 
         const myCar = new Model("Maruti", "WagonR");
         document.getElementById("demo").innerHTML = myCar.show();
+        window.alert(myCar.show());
     </script>
 </body>
 </html>
