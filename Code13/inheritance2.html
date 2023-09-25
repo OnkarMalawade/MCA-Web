@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, nam deserunt velit a libero quis dicta suscipit? Dolores doloremque quam, similique nostrum cupiditate consectetur, voluptates iure, fuga distinctio qui odio.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        class Person{
+            constructor(fname,lname){
+                this.fname = fname;
+                this.lname = lname;
+            }
+            show(){
+                return 'First Name:' +this.fname +' , Last Name: '+this.lname;
+            }
+        }
+
+        class Student extends Person{
+            constructor(fname, lname, schname, grade, roll){
+                super(fname,lname);
+                this.schname = schname;
+                this.grade = grade;
+                this.roll = roll;
+            }
+            displayStd(){
+                return this.show() + ' , School Name:'+this.schname+' , Grade:'+this.grade+' , rollNo.:'+this.roll;
+            }
+            displayPerson(){
+                return this.show();
+            }
+        }
+        const myInfo = new Student("Onkar", "Malawade","Finolex college  ratangiri","O","A230075/37");
+        document.getElementById("demo").innerHTML = myInfo.displayStd();
+        window.alert(myInfo.displayPerson());
+    </script>
+</body>
+</html>
