@@ -8,9 +8,9 @@ var con = mysql.createConnection({
 con.connect(function(err){
     if(err) {throw(err);}
     console.log('connected');
-    sql1 = 'INSERT INTO empinfo values(1,"Aditya","Main","Ratnagiri",50000)';
-    con.query(sql1,function(err,result){
-        if(err) {throw(err);}
-        console.log('data is inserted...');
-    })
-})
+    sql1 = "UPDATE empinfo SET address = 'Devrukh' WHERE address = 'Ratnagiri'";
+    con.query(sql1, function (err, result) {
+    if (err) throw err;
+    console.log(result.affectedRows + " record(s) updated");
+  });
+});
