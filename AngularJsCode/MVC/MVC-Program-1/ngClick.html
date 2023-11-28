@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        Click on the Headers of the Table to sort them.
+    </p>
+    <div ng-app="ap1" ng-controller="ctr1">
+        <table border="2px solid black" width="100%">
+            <tr>
+                <th ng-click="orderByMe('name')">Name</th>
+                <th ng-click="orderByMe('city')">City</th>
+            </tr>
+            <tr ng-repeat="x in names | orderBy:myOrderBy">
+                <td> {{x.name}} </td>
+                <td> {{x.city}} </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        angular.module('ap1', []).controller('ctr1', ($scope) => {
+            $scope.names = [{
+                name: 'Onkar',
+                city: 'USA'
+            }, {
+                name: 'Atharav',
+                city: 'Dubai'
+            }, {
+                name: 'Raju',
+                city: 'Ulhasnagar'
+            }, {
+                name: 'Rahul',
+                city: 'Phonda'
+            }, {
+                name: 'Suresh',
+                city: 'Goa'
+            }, {
+                name: 'Naresh',
+                city: 'Uk'
+            }, {
+                name: 'Ramesh',
+                city: 'UP'
+            }, {
+                name: 'Paresh',
+                city: 'Nagaland'
+            }, {
+                name: 'Jignesh',
+                city: 'Pune'
+            }];
+            $scope.orderByMe = function(x) {
+                $scope.myOrderBy = x;
+            }
+        });
+    </script>
+</body>
+
+</html>
