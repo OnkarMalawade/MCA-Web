@@ -3,5 +3,5 @@ src link of the AngularJs : https://ajax.googleapis.com/ajax/libs/angularjs/1.6.
 
 <p align="center">
   <img src="https://shreysharma.com/wp-content/uploads/2019/04/mvc.webp" width="350" title="hover text">
- 
+  <img src="https://developer.mozilla.org/en-US/docs/Glossary/MVC/model-view-controller-light-blue.png" width="550" title="hover text">
 </p>
