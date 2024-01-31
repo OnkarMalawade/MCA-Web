@@ -3,13 +3,9 @@ var mysql = require('mysql');
 
 // Establish a connection to the MySQL server, specifying the database 'empDB1'
 var con = mysql.createConnection({
-    // Specify the host address of the MySQL server
     host: 'localhost',
-    // Provide the username for accessing the MySQL server
     user: 'root',
-    // Enter the password for the specified user
     password: '',
-    // Specify the database to connect to
     database: 'empDB1'
 });
 
@@ -22,16 +18,23 @@ con.connect(function(err) {
 
     console.log('Connected to MySQL database');
 
-    // Define the SQL query to create a new table named 'empinfo'
-    var sql1 = 'CREATE TABLE empinfo(id int(10), fname varchar(20), lname varchar(20), address varchar(50), salary int(20))';
+    // Prepare the SQL query to insert multiple records into the 'empinfo' table
+    var sql = 'INSERT INTO empinfo (id, fname, lname, address, salary) VALUES ?';
 
-    // Execute the SQL query using the connection object
-    con.query(sql1, function(err, result) {
+    // Define the array of records to be inserted
+    var records = [
+        [1, 'John', 'Doe', '123 Main Street', 50000],
+        [2, 'Jane', 'Smith', '456 Elm Street', 60000],
+        [3, 'Peter', 'Jones', '789 Oak Street', 70000]
+    ];
+
+    // Execute the SQL query using the connection object and the array of records
+    con.query(sql, [records], function(err, result) {
         if (err) {
             // Handle any errors that occur during query execution
             throw err;
         }
 
-        console.log('Table created successfully');
+        console.log('Number of records inserted:', result.affectedRows);
     });
 });
